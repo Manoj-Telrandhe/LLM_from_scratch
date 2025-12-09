@@ -43,7 +43,7 @@ def create_dataloader(txt, batch_size=4, max_length=256, stride=128, shuffle=Tru
 with open("/content/verdict_story.txt", "r") as file:
   raw_text = file.read()
 
-# create instance
+# create instance with batch_size = 1 and stride = 1
 dataloader = create_dataloader(
     raw_text, batch_size=1, max_length=4, stride=1, shuffle=False
 )
@@ -52,3 +52,11 @@ dataloader = create_dataloader(
 data_iter = iter(dataloader)
 first_batch = next(data_iter)
 print(first_batch)
+
+
+# batch_size = 8 and max_length = 4 
+dataloader = create_dataloader(raw_text, batch_size=8, max_length=4, stride=4, shuffle=False)
+data_iter = iter(dataloader)
+inputs, targets = next(data_iter)
+print("Inputs:\n", inputs)
+print("\nTargets:\n", targets)
