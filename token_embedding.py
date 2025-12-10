@@ -21,7 +21,7 @@ print(embedding_layer(input_ids))
 vocab_size = 50257
 output_dim = 256
 
-#It takes two input.....torch.nn.Embedding(num_embeddings, embedding_dim)
+#torch.nn.Embedding(num_embeddings, embedding_dim)
 token_embedding_layer = torch.nn.Embedding(vocab_size, output_dim)
 
 print(token_embedding_layer.weight)
