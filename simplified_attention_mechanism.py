@@ -61,6 +61,12 @@ print(attn_scores)
 
 
 # Normalization 
+# Normal Theorotical Softmax formula may encounter numerical instablity problems, such as overflow and underflow when dealing with large or small input values respectively.
+# Therefore, in practice it's advisable to use PyTorch implementation of softmax, which has been extensively optimized for performance:
+attn_weights = torch.softmax(attn_scores, dim=-1)
+print(attn_weights)
+
+
 
 
 
