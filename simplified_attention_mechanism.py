@@ -15,6 +15,39 @@ inputs = torch.tensor(
    [0.05, 0.80, 0.55]] # step     (x^6)
 )
 
+         # Visualization
+
+
+# Create 3D plot with vectors from origin to each point, using different colors
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# Define a list of colors for the vectors
+colors = ['r', 'g', 'b', 'c', 'm', 'y']
+
+# Plot each vector with a different color and annotate with the corresponding word
+for (x, y, z, word, color) in zip(x_coords, y_coords, z_coords, words, colors):
+    # Draw vector from origin to the point (x, y, z) with specified color and smaller arrow length ratio
+    ax.quiver(0, 0, 0, x, y, z, color=color, arrow_length_ratio=0.05)
+    ax.text(x, y, z, word, fontsize=10, color=color)
+
+# Set labels for axes
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+
+# Set plot limits to keep arrows within the plot boundaries
+ax.set_xlim([0, 1])
+ax.set_ylim([0, 1])
+ax.set_zlim([0, 1])
+
+plt.title('3D Plot of Word Embeddings with Colored Vectors')
+plt.show()
+
+
+
+
+
 
 
 
