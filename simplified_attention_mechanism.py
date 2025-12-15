@@ -68,6 +68,12 @@ print(attn_weights)
 # By setting the dim=-1, we are instructing the softmax function to apply the normalization along the last dimension of the attn_scores tensor.
 
 
+# Final step we will calculate the context vector by multiplying the inputs embeddings with their respective attention weights
+# context vector is enriched embedding vector
+all_context_vecs = attn_weights @ inputs
+print(all_context_vecs)
+
+
 
 
 
