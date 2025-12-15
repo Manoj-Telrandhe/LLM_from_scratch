@@ -57,8 +57,12 @@ print(attn_scores)
 # However, for-loops are generally slow, and we can achieve the same results using matrix multiplication:
 attn_scores = inputs @ inputs.T
 print(attn_scores)
+# The matrix multiplication much more efficient than two for loops
+
 
 # Normalization 
+
+
 
 
 
