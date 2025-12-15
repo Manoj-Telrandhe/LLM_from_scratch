@@ -15,9 +15,8 @@ inputs = torch.tensor(
    [0.05, 0.80, 0.55]] # step     (x^6)
 )
 
-         # Visualization
 
-
+# Visualization
 # Create 3D plot with vectors from origin to each point, using different colors
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -43,6 +42,26 @@ ax.set_zlim([0, 1])
 
 plt.title('3D Plot of Word Embeddings with Colored Vectors')
 plt.show()
+
+
+# Attention Scores
+attn_scores = torch.empty(6, 6)
+
+for i, x_i in enumerate(inputs):
+  for j, x_j in enumerate(inputs):
+    attn_scores[i, j] = torch.dot(x_i, x_j)
+
+print(attn_scores)
+
+# When computing the preceding attention score tensor, we used for-loops in Python.
+# However, for-loops are generally slow, and we can achieve the same results using matrix multiplication:
+attn_scores = inputs @ inputs.T
+print(attn_scores)
+
+# Normalization 
+
+
+
 
 
 
