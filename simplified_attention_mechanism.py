@@ -65,6 +65,7 @@ print(attn_scores)
 # Therefore, in practice it's advisable to use PyTorch implementation of softmax, which has been extensively optimized for performance:
 attn_weights = torch.softmax(attn_scores, dim=-1)
 print(attn_weights)
+# By setting the dim=-1, we are instructing the softmax function to apply the normalization along the last dimension of the attn_scores tensor.
 
 
 
