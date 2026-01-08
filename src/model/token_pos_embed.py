@@ -1,6 +1,7 @@
 import torch
 from src.config import GPT_CONFIG_124M
 
+
 cfg = GPT_CONFIG_124M
 
 
