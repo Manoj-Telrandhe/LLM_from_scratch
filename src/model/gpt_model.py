@@ -20,8 +20,8 @@ class GPTModel(nn.Module):
         )
 
     def forward(self, in_idx):
-        batch_size, seq_len = in_idx.shape
-        tok_embeds = self.tok_emb(in_idx)
+        batch_size, seq_len = in_idx.shape  #2D
+        tok_embeds = self.tok_emb(in_idx)   #3D
         pos_embeds = self.pos_emb(torch.arange(seq_len, device=in_idx.device))
         x = tok_embeds + pos_embeds  # Shape [batch_size, num_tokens, emb_size]
         x = self.drop_emb(x)
