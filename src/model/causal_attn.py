@@ -52,7 +52,7 @@ class CausalAttention(nn.Module):
         queries = self.W_query(x)
         values = self.W_value(x)
 
-        attn_scores = queries @ keys.transpose(1, 2) # Changed transpose
+        attn_scores = queries @ keys.transpose(1, 2) # Changed transpose here
         attn_scores.masked_fill_(  # New, _ ops are in-place
             self.mask.bool()[:num_tokens, :num_tokens], -torch.inf)  # `:num_tokens` to account for cases where the number of tokens in the batch is smaller than the supported context_size
         attn_weights = torch.softmax(
