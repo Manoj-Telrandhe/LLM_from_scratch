@@ -1,5 +1,6 @@
 from src.utils.download import download_text
 from src.data_pipeline.dataset import create_dataloader
+from src.config import GPT_CONFIG_124M
 
 # URL for text data
 URL = "https://raw.githubusercontent.com/rasbt/LLMs-from-scratch/main/ch02/01_main-chapter-code/the-verdict.txt"
