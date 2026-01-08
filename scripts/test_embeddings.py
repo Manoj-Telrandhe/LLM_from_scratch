@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     # Token embeddings
     token_embeddings = token_embedding_layer(inputs)
-    print("Token embeddings shape:", token_embeddings.shape)
+    print("Token embeddings shape:", token_embeddings.shape)  # 3D tensor bcoz each token ID get mapped to 768 embed dim
 
     # Positional embeddings
     pos_embeddings = pos_embedding_layer(
