@@ -31,5 +31,3 @@ class GPTModel(nn.Module):
         return logits
     
 
-cfg = GPT_CONFIG_124M
-# Instantiate the GPT Model
