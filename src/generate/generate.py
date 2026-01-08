@@ -4,7 +4,7 @@ import torch.nn as nn
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def generate_text_sample(model, idx, max_new_tokens, context_size):
-  model.device()
+  model = model.to(device)
   idx = idx.to(device)
   # idx is (batch, n_tokens) array of indices in the current context
   for _ in range(max_new_tokens):
