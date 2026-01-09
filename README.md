@@ -16,5 +16,4 @@ This project is organized to help you understand each building block of a GPT-st
 The workflow follows the same logical order as a real LLM:
 
 ### Data Preparation & Tokenization
-
-**Location**: src/data_pipeline and src/tokenizer
+Location: src/data_pipeline and src/tokenizer
