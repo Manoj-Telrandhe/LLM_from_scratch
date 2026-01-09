@@ -6,7 +6,6 @@ Instead of focusing on scale or performance, it breaks down core components such
 
 
 The goal is clarity: seeing how each part fits together to form a GPT-style language model.
-
 ---
 
 ## 📌 Project Workflow
