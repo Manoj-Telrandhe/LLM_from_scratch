@@ -23,6 +23,6 @@ def download_text(url: str):
         
     with open(file_path, "r", encoding="utf-8") as file:
         text_data = file.read()
-    print(" file read and send the text data Succesfully ✅")
+    print("✅ file read and send the text data Succesfully")
 
     return text_data
