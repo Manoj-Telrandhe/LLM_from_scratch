@@ -6,3 +6,11 @@ Instead of focusing on scale or performance, it breaks down core components such
 
 
 The goal is clarity: seeing how each part fits together to form a GPT-style language model.
+
+
+## 📌 Project Workflow
+
+This project is organized to help you understand each building block of a GPT-style language model independently, while still allowing everything to come together in a complete training pipeline.
+
+
+The workflow follows the same logical order as a real LLM:
