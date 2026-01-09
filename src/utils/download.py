@@ -20,5 +20,9 @@ def download_text(url: str):
         print("✅ Download complete.")
     else:
         print("📁 Dataset already exists. Skipping download.")
+        
+    with open(file_path, "r", encoding="utf-8") as file:
+        text_data = file.read()
+    print(" file read and send the text data Succesfully ✅")
 
-    return file_path
+    return text_data
