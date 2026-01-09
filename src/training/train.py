@@ -30,7 +30,7 @@ def train_model_simple(model, train_loader, val_loader, optimizer, device, num_e
                 train_losses.append(train_loss)
                 val_losses.append(val_loss)
                 track_tokens_seen.append(tokens_seen)
-                print(f"Ep {epoch+1} (Step {global_step:06d}): "
+                print(f"Epoch {epoch+1} (Step {global_step:06d}): "
                       f"Train loss {train_loss:.3f}, Val loss {val_loss:.3f}")
 
         # Print a sample text after each epoch

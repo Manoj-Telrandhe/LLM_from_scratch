@@ -5,6 +5,7 @@ from src.tokenizer.bpe_tokenizer import my_tokenizer
 
 def create_dataloader(
     txt,
+    tokenizer,
     batch_size,
     max_length,
     stride,
@@ -13,7 +14,7 @@ def create_dataloader(
     num_workers=0,
 ):
     
-    tokenizer = my_tokenizer()
+    
 
     dataset = GPTDataset(txt, tokenizer, max_length, stride)
 
