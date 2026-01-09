@@ -14,7 +14,6 @@ def create_dataloader(
     num_workers=0,
 ):
     
-    
 
     dataset = GPTDataset(txt, tokenizer, max_length, stride)
 
