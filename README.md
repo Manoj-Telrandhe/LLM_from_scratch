@@ -112,6 +112,8 @@ Make sure you are in the **project root directory**.
 
 ```bash
 python -m scripts.train
+```
+
 
 ---
 
