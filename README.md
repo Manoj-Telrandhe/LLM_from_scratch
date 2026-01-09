@@ -17,5 +17,6 @@ The workflow follows the same logical order as a real LLM:
 
 ---
 
-### Data Preparation & Tokenization
+## Data Preparation & Tokenization
+
 Location: src/data_pipeline and src/tokenizer
