@@ -112,3 +112,16 @@ Make sure you are in the **project root directory**.
 
 ```bash
 python -m scripts.train
+
+---
+
+## 🧠 How to Explore This Repository
+
+1. `src/tokenizer/` → how text becomes tokens  
+2. `src/data_pipeline/` → how training data is created  
+3. `src/model/` → how GPT is built block by block  
+4. `src/generate/` → how text generation works  
+5. `src/training/` → how everything is trained together  
+6. `scripts/train.py` → full pipeline in action  
+
+Each section can be studied independently.
